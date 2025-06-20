@@ -1,0 +1,180 @@
+#front-view{ 
+    display: flex;
+    position: relative;
+    margin-top: 60px; 
+    flex-direction: row;
+}
+
+#sidebar {
+  width: 310px;
+  transition: all 0.3s ease;
+}
+
+#sidebar.collapsed {
+  width: 50px;
+  overflow-x: hidden;
+}
+
+#sidebar.collapsed .row{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#sidebar.collapsed .row button {
+  justify-content: center;
+  text-align: center;
+}
+
+#sidebar.collapsed .row button {
+ font-size: 0px;
+}
+
+#sidebar.collapsed .row button .main-icon {
+  font-size: 20px !important;
+  margin-left: 0px !important;
+  margin-right: 0 !important;
+}
+
+#sidebar.collapsed .foot-row,
+#sidebar.collapsed span,
+#sidebar.collapsed .hide,
+#sidebar.collapsed a {
+  display: none;
+}
+
+#sidebar.collapsed ~ .right-sec .videos-grid .video-card {
+    width: 23%; 
+}
+
+#sidebar:not(.collapsed) ~ .right-sec .videos-grid .video-card {
+    width: 28%; 
+}
+
+.active{
+    background-color: rgb(60, 60, 60);
+}
+
+.left-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 17%;
+    background-color: black;
+    padding: 10px;
+    position: sticky;
+    top: 60px; 
+    height: calc(100vh - 60px); 
+    overflow-y: auto; 
+}
+
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+hr{
+    width: 90%;
+    border: 1px solid grey;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    gap: 30px;
+    font-size: 15px;
+}
+button:hover{
+    background-color: rgb(60, 60, 60);
+    cursor: pointer;
+}
+.main-icon{
+    font-size: 20px;
+}
+
+.foot-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.foot-row a{
+    color: rgb(207, 204, 204);
+    text-decoration: none;
+}
+.foot-row span{
+    color: grey;
+    font-size: 13px;
+}
+
+.right-sec{
+    width: 100%;
+    position: relative;
+    top: 2px;
+}
+
+.videos-grid{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 5px;
+    justify-content: center;
+}
+
+.video-card{
+    width: 28%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.video-card:hover{
+    cursor: pointer;
+    background-color: rgb(50, 50, 50);
+    transition: .1s ease;
+}
+
+.video-card .img-sec{
+    height: 200px;
+}
+
+.video-card .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card .img-sec img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.video-card h4{
+    font-size: 15px;
+    word-break: normal;
+    color: white;
+}
+
+.video-card p{
+    font-size: 10px;
+    color: grey;
+}
+
+.text span{
+    font-size: 12px;
+    color: grey;
+}

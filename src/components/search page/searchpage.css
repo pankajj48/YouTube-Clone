@@ -1,0 +1,43 @@
+
+.search-results {
+  padding: 20px;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: flex-start;
+}
+
+.result-card {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.result-card img {
+  width: 40%;
+  height: 280px;
+  border-radius: 10px;
+}
+
+.result-card h4 {
+  font-size: 20px;
+  margin: 8px;
+}
+
+.result-card p {
+  font-size: 14px;
+  margin: 0 8px 8px;
+  color: #555;
+}
+
+.result-card span{
+    margin: 0 8px 8px;
+    font-size: 12px;
+}
