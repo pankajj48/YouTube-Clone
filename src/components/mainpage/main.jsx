@@ -3,24 +3,13 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHouse,
-  faFire,
-  faMusic,
-  faGamepad,
-  faNewspaper,
-  faTrophy,
-  faLightbulb,
-  faShirt,
-  faGear,
-  faFlag,
-  faCircleQuestion,
+  faHouse, faFire, faMusic, faGamepad, faNewspaper, faTrophy,
+  faLightbulb, faShirt, faGear, faFlag, faCircleQuestion, faEllipsisV
 } from "@fortawesome/free-solid-svg-icons";
 import { SiYoutubeshorts } from "react-icons/si";
 import {
-  MdOutlineSubscriptions,
-  MdOutlinePlaylistPlay,
-  MdOutlineWatchLater,
-  MdOutlineFeedback,
+  MdOutlineSubscriptions, MdOutlinePlaylistPlay,
+  MdOutlineWatchLater, MdOutlineFeedback
 } from "react-icons/md";
 import { FaHistory } from "react-icons/fa";
 import { LuSquarePlay } from "react-icons/lu";
@@ -72,7 +61,7 @@ const Frontpage = () => {
   };
 
   useEffect(() => {
-    let url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics,contentDetails&chart=mostPopular&maxResults=42&regionCode=IN&key=${API_KEY}`;
+    let url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&maxResults=42&regionCode=IN&key=${API_KEY}`;
 
     if (categoryMap[activeCategory]) {
       url += `&videoCategoryId=${categoryMap[activeCategory]}`;
@@ -86,138 +75,104 @@ const Frontpage = () => {
 
   return (
     <section id="front-view">
+      {/* Sidebar */}
       <div id="sidebar" className="left-sec">
         <div className="row">
-          <button>
-            <FontAwesomeIcon className="main-icon" icon={faHouse} />{" "}
-            <span>Home</span>
-          </button>
-          <button>
-            <SiYoutubeshorts className="main-icon" /> <span>Shorts</span>{" "}
-          </button>
-          <button>
-            <MdOutlineSubscriptions className="main-icon" />{" "}
-            <span>Subscriptions</span>
-          </button>
+          <button><FontAwesomeIcon className="main-icon" icon={faHouse} /><span>Home</span></button>
+          <button><SiYoutubeshorts className="main-icon" /><span>Shorts</span></button>
+          <button><MdOutlineSubscriptions className="main-icon" /><span>Subscriptions</span></button>
         </div>
         <hr className="hide" />
         <div className="row hide">
           <button>You &gt;</button>
-          <button>
-            <FaHistory className="main-icon" /> History
-          </button>
-          <button>
-            <MdOutlinePlaylistPlay className="main-icon" /> Playlists
-          </button>
-          <button>
-            <LuSquarePlay className="main-icon" /> Your Videos
-          </button>
-          <button>
-            <MdOutlineWatchLater className="main-icon" /> Watch later
-          </button>
-          <button>
-            <AiOutlineLike className="main-icon" /> Liked Videos
-          </button>
+          <button><FaHistory className="main-icon" />History</button>
+          <button><MdOutlinePlaylistPlay className="main-icon" />Playlists</button>
+          <button><LuSquarePlay className="main-icon" />Your Videos</button>
+          <button><MdOutlineWatchLater className="main-icon" />Watch Later</button>
+          <button><AiOutlineLike className="main-icon" />Liked Videos</button>
         </div>
         <hr className="hide" />
         <div className="row hide">
           <button>Explore</button>
           {Object.keys(categoryMap).map((name) => (
-            <button
-              key={name}
-              className={activeCategory === name ? "active" : ""}
-              onClick={() => setActiveCategory(name)}
-            >
-              <FontAwesomeIcon
-                className="main-icon"
-                icon={
-                  name === "Trending"
-                    ? faFire
-                    : name === "Music"
-                    ? faMusic
-                    : name === "Gaming"
-                    ? faGamepad
-                    : name === "News"
-                    ? faNewspaper
-                    : name === "Sports"
-                    ? faTrophy
-                    : name === "Learning"
-                    ? faLightbulb
-                    : name === "Fashion & Beauty"
-                    ? faShirt
-                    : faFire // fallback
-                }
-              />{" "}
+            <button key={name} className={activeCategory === name ? "active" : ""} onClick={() => setActiveCategory(name)}>
+              <FontAwesomeIcon className="main-icon" icon={
+                name === "Trending" ? faFire :
+                name === "Music" ? faMusic :
+                name === "Gaming" ? faGamepad :
+                name === "News" ? faNewspaper :
+                name === "Sports" ? faTrophy :
+                name === "Learning" ? faLightbulb :
+                name === "Fashion & Beauty" ? faShirt : faFire
+              } />
               {name}
             </button>
           ))}
         </div>
         <hr className="hide" />
         <div className="row hide">
-          <button>
-            <FontAwesomeIcon className="main-icon" icon={faGear} /> Settings
-          </button>
-          <button>
-            <FontAwesomeIcon className="main-icon" icon={faFlag} /> Report
-            history
-          </button>
-          <button>
-            <FontAwesomeIcon className="main-icon" icon={faCircleQuestion} />{" "}
-            Help
-          </button>
-          <button>
-            <MdOutlineFeedback className="main-icon" /> Send feedback
-          </button>
+          <button><FontAwesomeIcon className="main-icon" icon={faGear} />Settings</button>
+          <button><FontAwesomeIcon className="main-icon" icon={faFlag} />Report</button>
+          <button><FontAwesomeIcon className="main-icon" icon={faCircleQuestion} />Help</button>
+          <button><MdOutlineFeedback className="main-icon" />Feedback</button>
         </div>
         <hr className="hide" />
         <div className="row foot hide">
           <div className="foot-row">
-            <a href="#">About</a>
-            <a href="#">Press</a>
-            <a href="#">Copyright</a>
-            <a href="#">Contact us</a>
-            <a href="#">Creators</a>
-            <a href="#">Advertise</a>
-            <a href="#">Developer</a>
+            <a href="#">About</a><a href="#">Press</a><a href="#">Copyright</a>
+            <a href="#">Contact</a><a href="#">Creators</a><a href="#">Advertise</a><a href="#">Developer</a>
           </div>
           <div className="foot-row">
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-            <a href="#">Policy & Safety</a>
-            <a href="#">How YouTube works</a>
-            <a href="#">Test new features</a>
+            <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Policy & Safety</a>
+            <a href="#">How YouTube works</a><a href="#">Test new features</a>
           </div>
           <div className="foot-row">
-            <span> &copy; 2025 Pankaj</span>
+            <span>© 2025 Pankaj</span>
           </div>
         </div>
       </div>
 
+      {/* Main Video Section */}
       <div className="right-sec">
         <div className="videos-grid">
-          {videos.map((video) => (
-            <Link
-              to={`/watch?v=${video.id}`}
-              key={video.id || video.etag}
-              className="video-card"
-              onClick={() => {document.title=`${video?.snippet?.title}`}}
-            >
-              <div className="img-sec">
-                <img
-                  src={video?.snippet?.thumbnails?.medium?.url || ""}
-                  alt={video?.snippet?.title || "Video thumbnail"}
-                />
-              </div>
-              <div className="text">
-                <h4>{video?.snippet?.title || "Untitled"}</h4>
-                <p>{video?.snippet?.channelTitle || "Unknown Channel"}</p>
-                <span>
-                  {formatViews(Number(video?.statistics?.viewCount) || 0)} •{" "}
-                  {timeAgo(video?.snippet?.publishedAt || new Date())}
-                </span>
-              </div>
-            </Link>
-          ))}
+          {videos.map((video) => {
+            const videoId = typeof video.id === "object" && video.id.videoId ? video.id.videoId : video.id;
+            return (
+              <Link
+                to={`/watch?v=${videoId}`}
+                key={videoId}
+                className="video-card"
+                onClick={() => {
+                  document.title = video?.snippet?.title;
+                }}
+              >
+                <div className="img-sec">
+                  <img
+                    src={video?.snippet?.thumbnails?.medium?.url || ""}
+                    alt={video?.snippet?.title || "Video"}
+                  />
+                </div>
+                <div className="text with-avatar">
+                  <div className="avatar-title-row">
+                    <img
+                      src={`https://i.pravatar.cc/40?u=${video.snippet.channelId}`}
+                      alt="Channel"
+                      className="channel-avatar"
+                    />
+                    <div className="text-content">
+                      <h4>{video.snippet.title}</h4>
+                      <p>{video.snippet.channelTitle}</p>
+                      <span>
+                        {formatViews(Number(video?.statistics?.viewCount) || 0)} •{" "}
+                        {timeAgo(video.snippet.publishedAt)}
+                      </span>
+                    </div>
+                    <FontAwesomeIcon icon={faEllipsisV} className="dots-icon" />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .navbar{
@@ -173,4 +174,188 @@
     border-radius: 100%;
     width: 40px;
     height: 40px;
+}/* ...existing code... */
+
+/* Mobile: Show only logo, search bar, and id section */
+/* Mobile: Show only logo, search bar, and email/id section */
+@media (max-width: 600px) {
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 0 6px;
+    gap: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .first-sec,
+  .sec-2,
+  .sec-3 {
+    width: auto;
+    flex-shrink: 1;
+  }
+
+  /* Hide all except logo, menu icon, and email/id */
+  .first-sec > :not(.logo):not(.menu),
+  .sec-3 > :not(.email-section) {
+    display: none !important;
+  }
+
+  .logo {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo span {
+    font-size: 14px;
+    color: white;
+  }
+
+  .sec-2 {
+    width: 100%;
+    max-width: 60vw;
+    min-width: 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .search {
+    width: 80;
+    display: flex;
+    gap: 4px;
+    padding-left: 0;
+  }
+
+  .sec-2 input {
+    height: 28px;
+    flex: 1;
+    width: 100%;
+    font-size: 13px;
+    padding: 0 8px;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .sec-2 .sea-logo {
+    height: 28px;
+    width: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #303030;
+  }
+
+  .sec-2 .mike {
+    display: none !important;
+  }
+
+  .email-section {
+    display: none;
+  }
+
+}
+
+/* Tablet: Adjust layout for medium screens */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .navbar {
+    padding: 0 8px;
+    height: 54px;
+    gap: 2%;
+    width: 100%;
+    max-width: 100vw;
+  }
+  .first-sec > :not(.logo):not(.menu),
+  .sec-3 > :not(.email-section) {
+    display: none !important;
+  }
+
+  .first-sec {
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .logo span {
+    font-size: 17px;
+  }
+
+  .sec-2 {
+    width: 70%;
+    height: 38px;
+    gap: 6px;
+  }
+
+  .sec-2 input {
+    height: 34px;
+    font-size: 14px;
+    border-radius: 12px 0 0 12px;
+    padding: 0 10px;
+  }
+
+  .sec-2 .sea-logo {
+    height: 34px;
+    width: 44px;
+    font-size: 20px;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .sec-2 .mike {
+    width: 7%;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .search {
+    width: 100%;
+    padding-left: 2rem;
+    gap: 6px;
+  }
+
+  .sec-3 {
+    gap: 12px;
+  }
+
+  .create {
+    width: 80px;
+    height: 34px;
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .bell {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .email{
+    display: none;
+  }
+
 }

@@ -177,3 +177,99 @@
   font-size: 0.85rem;
   color: #888;
 }
+
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  #plat {
+    flex-direction: column;
+    margin-top: 56px;
+    padding-top: 0;
+    min-height: unset;
+    
+  }
+  .vid {
+    padding: 16px 8px 8px 8px;
+    flex: unset;
+  }
+  .suggestion {
+    padding: 16px 8px 8px 8px;
+    background: #181818;
+    flex: unset;
+  }
+  .video-container {
+    border-radius: 0;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  #plat {
+    flex-direction: column;
+    margin-top: 48px;
+    padding: 10px;
+  }
+  .vid,
+  .suggestion {
+    padding: 8px 0 0 0;
+  }
+  .video-container {
+    aspect-ratio: 16/9;
+    border-radius: 0;
+    margin-bottom: 8px;
+    font-size: 19px;
+    border-radius: 10px;
+  }
+  .details {
+    border-radius: 0;
+    padding: 8px 4px;
+    gap: 10px;
+    font-size: 19px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  .details p{
+    font-size: 12px;
+  }
+  .comments-section {
+    border-radius: 0;
+    padding: 10px 4px 4px 4px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .suggestion {
+    background: #181818;
+  }
+  .page-sugg-videos {
+    gap: 10px;
+  }
+  .page-video-card {
+    gap: 8px;
+    padding: 6px 2px;
+    border-radius: 0;
+  }
+  .page-img-sec img {
+    width: 100px;
+    height: 56px;
+    border-radius: 4px;
+  }
+  .page-text h4 {
+    font-size: 0.95rem;
+    max-height: 2.2em;
+  }
+  .page-text p,
+  .page-text span {
+    font-size: 0.8rem;
+  }
+  .comment-author img {
+    width: 28px;
+    height: 28px;
+  }
+  .comment-text,
+  .comment-date {
+    margin-left: 36px;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
