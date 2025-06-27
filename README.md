@@ -1,12 +1,52 @@
-# React + Vite
+# 🎬 YouTube Clone (React.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **YouTube Clone**, a modern and interactive video streaming UI built using **React.js**.  
+This project replicates the user interface of YouTube 
+— including sidebar navigation, video player, and search features 
+— to help you learn and demonstrate front-end skills.
 
-Currently, two official plugins are available:
+![image](https://github.com/user-attachments/assets/6e24b84e-1e7b-4a76-bc42-17472145378c)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Live Preview link
+
+
+ https://pankajj48.github.io/YouTube/
+
+
+
+---
+
+## 🚀 Features
+
+- 📺 Responsive video layout
+- 🔍 Search functionality
+- 📁 Sidebar with categories (Music, News, Gaming, etc.)
+- 🎥 Video player component
+- 🎨 Clean, modern UI with reusable components
+- 🌓 Dark theme friendly
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Description |
+|------------|-------------|
+| [React.js](https://reactjs.org/) | Core front-end library |
+| [Vite](https://vitejs.dev/)     | Lightning-fast build tool |
+| [React Router](https://reactrouter.com/) | For page navigation |
+| [FontAwesome](https://fontawesome.com/) / [React Icons](https://react-icons.github.io/react-icons/) | Iconography |
+| CSS / Custom Styling | Layout and responsiveness |
+
+---
+
+📌 To-Do / Upcoming
+
+- Improve mobile responsiveness
+- Add video recommendations section
+- Add like/share/comment features
+- Creative login functionality
+  
+Thank you ❤️
