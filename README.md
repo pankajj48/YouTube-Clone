@@ -13,8 +13,7 @@ This project replicates the user interface of YouTube
 Live Preview link
 
 
- https://pankajj48.github.io/YouTube/
-
+ https://pankajj48.github.io/YouTube-Clone/
 
 
 ---
