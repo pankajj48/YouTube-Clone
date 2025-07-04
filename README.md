@@ -1,4 +1,4 @@
-# 🎬 YouTube Clone (React.js)
+# YouTube Clone (React.js)
 
 Welcome to **YouTube Clone**, a modern and interactive video streaming UI built using **React.js**.  
 This project replicates the user interface of YouTube 
